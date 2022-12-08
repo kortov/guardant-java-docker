@@ -1,0 +1,26 @@
+version: '3.5'
+services:
+  guardant-java-docker:
+    image: guardant-java-docker:dev
+    container_name: guardant-java-docker
+    build:
+      context: .
+      args:
+        - JAR_FILE=guardant-java-docker-1.0.0.jar
+    volumes:
+      - .docker/error:/opt/error/
+      - .docker/dump:/opt/app/core/:rw
+      - /dev/bus/usb:/dev/bus/usb/
+    privileged: true
+    ulimits:
+      core: -1
+    device_cgroup_rules:
+      - 'c 189:* rmw'
+    #    entrypoint: /bin/bash
+    #    stdin_open: true
+    #    tty: true
+    command:
+      - "publicVendorCode"
+      - "privateReadCode"
+      - "featureNumber"
+      - "publicFeatureKey"
