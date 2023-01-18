@@ -1,6 +1,6 @@
 # guardant-java-docker
 
-minimal example to show jvm crash with guardant
+Minimal example to show jvm crash with guardant. Guardant Ticket#1079556
 
 # requirements
 
