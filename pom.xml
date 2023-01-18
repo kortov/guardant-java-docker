@@ -22,7 +22,7 @@
         <logback-core.version>0.9.26</logback-core.version>
         <jackson.version>2.11.4</jackson.version>
         <jsr305.version>3.0.2</jsr305.version>
-        <gurdant-slk.version>3.3.0</gurdant-slk.version>
+        <gurdant-slk.version>3.10.0</gurdant-slk.version>
         <maven-antrun-plugin.version>1.3</maven-antrun-plugin.version>
 
         <!-- Maven plugins -->
